@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+table.wrapper {
+  font-family: Arial, sans-serif;
+  border-collapse: collapse;
+
+  table.header {
+    max-width: 740px;
+    margin: 0 auto;
+    padding: 20px 1px;
+    border: 1px solid red;
+  }
+
+}
+
+.content {
+  width: 100%;
+  max-width: 600px;
+}
+
+a {
+  color: #0083FF;
+  text-decoration: none;
+
+  & span,
+  & strong,
+  &:visited {
+    & span,
+    & strong {
+      color: #0083FF;
+    }
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+}
+
+@media only screen and (min-device-width: 801px) {
+  .min-device {
+    width: 740px !important;
+  }
+}

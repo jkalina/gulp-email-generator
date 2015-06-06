@@ -1,0 +1,15 @@
+{
+  "paths" : {
+    "src" : "src",
+    "build" : "build",
+    "styles" : "styles"
+  },
+  "mail" : {
+    "from" : "Jakub Kalina"
+  },
+  "ftp" : {
+    "host" : "ftp.soften.nazwa.pl",
+    "remotePath" : "kuba/upload/exampleMail",
+    "url" : "http://a.soften.pl/kuba/upload/exampleMail/"
+  }
+}

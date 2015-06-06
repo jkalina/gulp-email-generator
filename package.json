@@ -1,0 +1,47 @@
+{
+  "name": "gulp-email-generator",
+  "version": "0.0.1",
+  "description": "Gulp based HTML email generator",
+  "main": "gulpfile.js",
+  "author": "Jakub Kalina",
+  "license": "apache2",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jkalina/gulp-email-generator.git"
+  },
+  "contributors": [
+    "Jakub Kalina <kuba.kalina@gmail.com> (https://github.com/jkalina)"
+  ],
+  "homepage": "https://github.com/jkalina/gulp-email-generator",
+  "keywords": [
+    "gulpplugin",
+    "inline",
+    "email",
+    "css",
+    "less"
+  ],
+  "devDependencies": {
+    "browser-sync": "^2.7.5",
+    "del": "^1.2.0",
+    "gulp": "^3.8.11",
+    "gulp-cdnify": "^1.0.2",
+    "gulp-compile-handlebars": "^0.5.0",
+    "gulp-concat": "^2.5.2",
+    "gulp-debug": "^2.0.1",
+    "gulp-ftp": "^1.0.3",
+    "gulp-imagemin": "^2.2.1",
+    "gulp-inject": "^1.2.0",
+    "gulp-inline-css": "^2.0.0",
+    "gulp-less": "^3.0.3",
+    "gulp-load-plugins": "^0.10.0",
+    "gulp-minify-html": "^1.0.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-usemin": "^0.3.11",
+    "gulp-util": "^3.0.4",
+    "htmlstrip-native": "^0.1.1",
+    "imagemin-pngquant": "^4.1.0",
+    "nodemailer": "^1.3.4",
+    "q": "^1.4.1",
+    "wrench": "^1.5.8"
+  }
+}
