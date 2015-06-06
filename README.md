@@ -1,5 +1,5 @@
 # gulp-email-generator
-> Gulp workflow for preparing HTML email content using Handlebars templating engine, LESS stylesheets converted to inline CSS and minified image files. Generator is inspired mainly by grunt-email-workflow and gulp-email-creator, takes the best ideas from both adding a little more modularity.
+> Gulp workflow for preparing HTML email content using Jade templating engine, LESS stylesheets converted to inline CSS and minified image files. Generator is inspired mainly by grunt-email-workflow and gulp-email-creator, takes the best ideas from both adding a little more modularity.
 
 ## Before you start...
 ...please have in mind, that I've just started developing this plugin - not every functionality works well, as it is the first time I write gulp plugin ;) therefore your contribution is very welcome!

@@ -20,7 +20,9 @@ module.exports = function (options) {
                 path: options.paths.src
             }))
             .pipe(gulp.dest(options.paths.build))
-            .pipe($.inlineCss())
+            .pipe($.inlineCss({
+                removeStyleTags: false
+            }))
             .pipe(gulp.dest(options.paths.build));
 
     });

@@ -1,28 +1,33 @@
+@import 'variables';
+@import 'allegro';
+
 body {
   margin: 0;
   padding: 0;
 }
 
-table.wrapper {
+.wrapper {
   font-family: Arial, sans-serif;
+  font-size: 13px;
   border-collapse: collapse;
+  width: 100%;
+  background-color: #ffffff;
 
-  table.header {
-    max-width: 740px;
+  .header,
+  .footer {
+    max-width: @content-width;
+    text-align: left;
     margin: 0 auto;
     padding: 20px 1px;
-    border: 1px solid red;
   }
-
-}
-
-.content {
-  width: 100%;
-  max-width: 600px;
+  
+  .footer {
+    border-top: 1px solid #dcdcdc;
+  }
 }
 
 a {
-  color: #0083FF;
+  color: @color-link;
   text-decoration: none;
 
   & span,
@@ -30,18 +35,69 @@ a {
   &:visited {
     & span,
     & strong {
-      color: #0083FF;
+      color: @color-link;
     }
   }
 
   &:hover {
     text-decoration: underline;
   }
-
 }
+
+.btn {
+  &.mso {
+    height: 40px;
+    v-text-anchor: middle;
+    width: 200px;
+  }
+
+  &.primary {
+    background-color: @color-primary-button-bg;
+    border-radius: 4px;
+    color: @color-primary-button-fg;
+    display: inline-block;
+    font-family: sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+  }
+}
+
+h1, h2, h3 {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 10px;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+h2 {
+  margin-bottom: 24px;
+  font-size: 14px;
+}
+
+h3 {
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
+.small {
+  color: #aaa;
+  font-size: 11px;
+  line-height: 16px;
+  clear: both;
+}
+
+.spaced {
+  padding: 20px 0;
+}
+
 
 @media only screen and (min-device-width: 801px) {
   .min-device {
-    width: 740px !important;
+    width: @content-width !important;
   }
 }
