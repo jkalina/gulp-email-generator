@@ -20,11 +20,11 @@ $ gulp
 ```
 
 Before you start sending emails, you need to create ```secret.json``` file which contains mail account / mail sending service credentials. 
-Read more in [secrets.json](#secrets.json) subsection of this document.  
+Read more in [secret.json](#secret.json) subsection of this document.  
 
 ## Configuration
 
-There are two configuration files: [config.json](#config.json) and [secrets.json](#secrets.json).
+There are two configuration files: [config.json](#config.json) and [secret.json](#secret.json).
 
 ### config.json
 
@@ -48,7 +48,7 @@ In this file you can reconfigure directory layout of project.
 }
 ```
 
-### secrets.json
+### secret.json
 
 This file should be placed in the root directory of generator. You can simply change the name of ```secret.json.example``` to ```secret.json``` and fill all required fields.
 

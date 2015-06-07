@@ -1,6 +1,6 @@
 {
   "paths" : {
-    "src" : "src",
+    "src" : "../allegro-email-templates",
     "build" : "build",
     "styles" : "styles"
   },
