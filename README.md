@@ -26,7 +26,7 @@ Read more in [secrets.json](#secrets.json) subsection of this document.
 
 There are two configuration files: [config.json](#config.json) and [secrets.json](#secrets.json).
 
-### config.json file
+### config.json
 
 In this file you can reconfigure directory layout of project.
 
@@ -48,9 +48,9 @@ In this file you can reconfigure directory layout of project.
 }
 ```
 
-### secrets.json file
+### secrets.json
 
-This file should be placed in the root directory of generator. You can simply change the name of ```secret.json.example``` to ```secret.json``` and fill the necessary fields.
+This file should be placed in the root directory of generator. You can simply change the name of ```secret.json.example``` to ```secret.json``` and fill all required fields.
 
 As the result, this file should look like in example below:
 
@@ -67,13 +67,13 @@ As the result, this file should look like in example below:
 }
 ```
 
-```secret.json``` file is by default added to ```.gitignore```, but still remember that sharing password with community can be quite risky ;)
+```secret.json``` file is by default added to ```.gitignore``` to prevent publishing confidential data on github :) 
 
 
 ## Basic usage
 
 ### Output minification
-By default, the generated HTML files are not minified. If you want to minify output, run generator with ```--minify``` flag set, as in the example below:
+By default, the generated HTML files are not minified. If you want to minify output, run generator with ```--minify``` flag, as in the example below:
 
 ```
 $ gulp --minify
@@ -81,5 +81,15 @@ $ gulp --minify
 
 ### Sending test email message
 
-### Creating template
+```
+$ gulp send --to=email@example.com [--template=template-name.html]
+```
+By default, template variable is set to `index.html`
 
+### Automatic page reloading
+
+```
+$ gulp serve [--template=template-name.html]
+```
+
+By default, template variable is set to `index.html`
