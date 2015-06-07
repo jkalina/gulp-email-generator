@@ -11,7 +11,7 @@ var gulp = require('gulp'),
 module.exports = function (options, secret) {
 
     gulp.task('send', function () {
-        return sendEmail($.util.env.template, $.util.env.to);
+        return sendEmail($.util.env.template ? $.util.env.template : 'index.html', $.util.env.to);
     });
 
     var sendEmail = function (template, recipient) {

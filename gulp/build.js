@@ -17,7 +17,9 @@ module.exports = function (options) {
 
     gulp.task('minifyHtml', ['templates', 'styles', 'images'], function () {
         return gulp.src(options.paths.build + '/**/*.html')
-            .pipe($.minifyHtml())
+            .pipe($.minifyHtml({
+                conditionals: true,
+            }))
             .pipe(gulp.dest(options.paths.build));
     });
 

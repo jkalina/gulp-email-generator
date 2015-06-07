@@ -11,9 +11,12 @@ module.exports = function (options) {
 
     gulp.task('buildTemplates', function () {
 
-        return gulp.src(options.paths.src + '/*.{hbs,handlebars}')
-            .pipe($.compileHandlebars({}, {
-                batch: [options.paths.src + '/partials']
+        return gulp.src(options.paths.src + '/*.jade')
+            .pipe($.jade({
+                pretty: true,
+                locals: {
+                    width: 740  //TODO: extract from variables.less
+                }
             }))
             .pipe($.rename(function (path) {
                 path.extname = '.html'
