@@ -9,7 +9,7 @@
   },
   "ftp" : {
     "host" : "ftp.soften.nazwa.pl",
-    "remotePath" : "kuba/upload/exampleMail",
-    "url" : "http://a.soften.pl/kuba/upload/exampleMail/"
+    "remotePath" : "/",
+    "url" : "http://a.soften.pl/kuba/upload/allegro/"
   }
 }
