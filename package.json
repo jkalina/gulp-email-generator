@@ -1,6 +1,6 @@
 {
   "name": "gulp-email-generator",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Gulp based HTML email generator",
   "main": "gulpfile.js",
   "author": "Jakub Kalina",
