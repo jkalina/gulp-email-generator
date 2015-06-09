@@ -3,8 +3,8 @@
   "version": "0.0.3",
   "description": "Gulp based HTML email generator",
   "main": "gulpfile.js",
-  "author": "Jakub Kalina",
-  "license": "apache2",
+  "author": "Jakub Kalina <kuba.kalina@gmail.com>",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/jkalina/gulp-email-generator.git"

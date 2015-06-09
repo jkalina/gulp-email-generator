@@ -1,7 +1,6 @@
 'use strict';
 
 var gulp = require('gulp'),
-    path = require('path'),
     $ = require('gulp-load-plugins')({
         pattern: ['gulp-*', 'del']
     });
@@ -13,10 +12,11 @@ module.exports = function (options) {
     gulp.task('buildStyles', ['templates'], function () {
 
         return gulp.src(options.paths.build + '/**/*.html')
+            .pipe($.debug())
             .pipe($.usemin({
                 css: [
                     $.less({
-                        paths: [path.join(options.paths.src, options.paths.styles)]
+                        paths: options.paths.src + '/' + options.paths.styles
                     })
                 ],
                 path: options.paths.src
