@@ -45,6 +45,6 @@
     "path": "^0.11.14",
     "q": "^1.4.1",
     "wrench": "^1.5.8",
-    "gulp-less2js": "../gulp-less2js/"
+    "gulp-less2js": "git://github.com:jkalina/gulp-less2js.git#master"
   }
 }
