@@ -1,6 +1,7 @@
 'use strict';
 
 var gulp = require('gulp'),
+    fs = require('fs'),
     $ = require('gulp-load-plugins')({
         pattern: ['gulp-*']
     });
@@ -9,14 +10,14 @@ module.exports = function (options) {
 
     gulp.task('templates', ['buildTemplates', 'cdnifyImages']);
 
-    gulp.task('buildTemplates', function () {
-
+    gulp.task('buildTemplates', ['extractLessVariables'], function () {
+        
+        var lessVars = JSON.parse(fs.readFileSync(options.paths.build + '/config/variables.json', 'utf8'));
+        
         return gulp.src(options.paths.src + '/*.jade')
             .pipe($.jade({
                 pretty: true,
-                locals: {
-                    width: 740  //TODO: extract from variables.less
-                }
+                locals: lessVars
             }))
             .pipe($.rename(function (path) {
                 path.extname = '.html'

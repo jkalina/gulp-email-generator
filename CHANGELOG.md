@@ -2,6 +2,7 @@
 
 Features:
 
+  - gulp-less2js task for converting LESS variables to JSON object
   - added --src flag to override path given in configuration
 
 ## 0.0.2 (2015-06-07)
