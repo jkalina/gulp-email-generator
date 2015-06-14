@@ -36,7 +36,6 @@ module.exports = function (options) {
     gulp.task('extractLessVariables', function () {
 
         return gulp.src(options.paths.src + '/**/variables.less')
-            .pipe($.debug())
             .pipe($.less2js())
             .pipe($.rename(function (path) {
                 path.dirname = '/config';
