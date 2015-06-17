@@ -12,7 +12,6 @@ module.exports = function (options) {
     gulp.task('buildStyles', ['templates'], function () {
 
         return gulp.src(options.paths.build + '/**/*.html')
-            .pipe($.debug())
             .pipe($.usemin({
                 css: [
                     $.less({
