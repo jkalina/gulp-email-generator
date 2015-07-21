@@ -7,9 +7,7 @@ var gulp = require('gulp'),
 
 module.exports = function (options) {
 
-    gulp.task('styles', ['buildStyles', 'cleanStyles']);
-
-    gulp.task('buildStyles', ['templates'], function () {
+    gulp.task('styles', ['templates'], function () {
 
         return gulp.src(options.paths.build + '/**/*.html')
             .pipe($.usemin({
@@ -28,10 +26,6 @@ module.exports = function (options) {
 
     });
 
-    gulp.task('cleanStyles', ['buildStyles'], function (done) {
-        $.del([options.paths.build + '/' + options.paths.styles], done);
-    });
-
     gulp.task('extractLessVariables', function () {
 
         return gulp.src(options.paths.src + '/**/variables.less')
@@ -40,8 +34,12 @@ module.exports = function (options) {
                 path.dirname = '/config';
                 path.extname = '.json';
             }))
-            .pipe(gulp.dest(options.paths.build))
+            .pipe(gulp.dest(options.paths.build));
 
+    });
+    
+    gulp.task('purgeStyles', ['styles'], function (done) {
+        $.del([options.paths.build + '/' + options.paths.styles], done);
     });
     
 };

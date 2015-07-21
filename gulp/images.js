@@ -8,8 +8,6 @@ var gulp = require('gulp'),
 
 module.exports = function (options, secret) {
 
-    gulp.task('images', ['minifyImages', 'uploadImages']);
-
     gulp.task('minifyImages', function () {
         return gulp.src(options.paths.src + '/**/*.{jpg,jpeg,png,gif}')
             .pipe($.imagemin({
@@ -23,6 +21,7 @@ module.exports = function (options, secret) {
 
     gulp.task('uploadImages', ['minifyImages'], function () {
         return gulp.src(options.paths.build + '/**/*.{jpg,jpeg,png,gif}')
+            .pipe($.debug())
             .pipe($.ftp({
                 host: options.ftp.host,
                 user: secret.ftp.username,
@@ -31,8 +30,9 @@ module.exports = function (options, secret) {
             }))
     });
 
-    gulp.task('cdnifyImages', ['uploadImages', 'buildTemplates'], function () {
+    gulp.task('images', ['templates', 'uploadImages'], function () {
         return gulp.src(options.paths.build + '/**/*.html')
+            .pipe($.debug())
             .pipe($.cdnify({
                 base: options.ftp.url
             }))
