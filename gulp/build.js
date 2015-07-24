@@ -8,11 +8,9 @@ var gulp = require('gulp'),
 module.exports = function (options) {
 
     gulp.task('build', ['templates', 'styles', 'images', 'purge'], function () {
-
         if ($.util.env.minify === true) {
             gulp.start('minifyHtml');
         }
-
     });
 
     gulp.task('minifyHtml', ['templates', 'styles', 'images'], function () {

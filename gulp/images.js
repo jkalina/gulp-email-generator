@@ -19,20 +19,18 @@ module.exports = function (options, secret) {
 
     });
 
-    gulp.task('uploadImages', ['minifyImages'], function () {
-        return gulp.src(options.paths.build + '/**/*.{jpg,jpeg,png,gif}')
-            .pipe($.debug())
-            .pipe($.ftp({
-                host: options.ftp.host,
-                user: secret.ftp.username,
-                pass: secret.ftp.password,
-                remotePath: options.ftp.remotePath
-            }))
-    });
+    //gulp.task('uploadImages', ['minifyImages'], function () {
+    //    return gulp.src(options.paths.build + '/**/*.{jpg,jpeg,png,gif}')
+    //        .pipe($.ftp({
+    //            host: options.ftp.host,
+    //            user: secret.ftp.username,
+    //            pass: secret.ftp.password,
+    //            remotePath: options.ftp.remotePath
+    //        }))
+    //});
 
-    gulp.task('images', ['templates', 'uploadImages'], function () {
+    gulp.task('images', ['templates'], function () {
         return gulp.src(options.paths.build + '/**/*.html')
-            .pipe($.debug())
             .pipe($.cdnify({
                 base: options.ftp.url
             }))

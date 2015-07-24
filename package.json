@@ -41,7 +41,6 @@
     "gulp-rename": "^1.2.2",
     "gulp-usemin": "^0.3.11",
     "gulp-util": "^3.0.4",
-    "htmlstrip-native": "^0.1.1",
     "i18next-scanner": "^0.5.5",
     "imagemin-pngquant": "^4.1.0",
     "jsxgettext": "^0.7.0",

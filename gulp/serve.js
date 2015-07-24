@@ -9,6 +9,7 @@ var gulp = require('gulp'),
 module.exports = function (options) {
 
     gulp.task('serve', ['build'], function () {
+        
         browserSync.init({
             server: {
                 baseDir: options.paths.build,
