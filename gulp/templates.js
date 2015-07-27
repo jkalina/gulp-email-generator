@@ -7,10 +7,8 @@ var gulp = require('gulp'),
     });
 
 module.exports = function (options) {
-
-    gulp.task('templates', ['buildTemplates', 'cdnifyImages']);
-
-    gulp.task('buildTemplates', ['extractLessVariables'], function () {
+    
+    gulp.task('templates', ['extractLessVariables'], function () {
         
         var lessVars = JSON.parse(fs.readFileSync(options.paths.build + '/config/variables.json', 'utf8'));
         
@@ -24,5 +22,5 @@ module.exports = function (options) {
             }))
             .pipe(gulp.dest(options.paths.build));
     });
-
+    
 };

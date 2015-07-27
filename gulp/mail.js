@@ -2,7 +2,6 @@
 
 var gulp = require('gulp'),
     nodemailer = require('nodemailer'),
-    htmlstrip = require('htmlstrip-native'),
     fs = require('fs'),
     $ = require('gulp-load-plugins')({
         pattern: ['gulp-*']
@@ -18,12 +17,12 @@ module.exports = function (options, secret) {
 
         try {
 
-            var opts = {
-                include_script: false,
-                include_style: false,
-                compact_whitespace: true,
-                include_attributes: {'alt': true}
-            };
+            //var opts = {
+            //    include_script: false,
+            //    include_style: false,
+            //    compact_whitespace: true,
+            //    include_attributes: {'alt': true}
+            //};
 
             var templatePath = options.paths.build + '/' + template;
 
@@ -41,8 +40,8 @@ module.exports = function (options, secret) {
                 from: options.mail.from,
                 to: recipient,
                 subject: 'test',
-                html: templateContent,
-                text: htmlstrip.html_strip(templateContent, opts)
+                html: templateContent
+                //text: htmlstrip.html_strip(templateContent, opts)
             };
 
             transporter.sendMail(mailOptions, function (error, info) {
